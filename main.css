@@ -9,13 +9,8 @@ body {
 p {
     font-size: 16px;
     font-weight: 200;
-    color: gray;
+    color: white;
     line-height: 1.5
-}
-.container {
-    display: flex;
-    align-content: space-evenly;
-    flex-direction: column;
 }
 h1,h2 {
     font-family: 'Poppins', sans-serif;
@@ -27,11 +22,10 @@ h1 {
 .grid-parent {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 4fr 50px;
+    grid-template-rows: 1fr 4fr;
     grid-template-areas: 
     "nav nav"
-    "quote mockup"
-    ". .";
+    "quote mockup";
     background: url("images/bg-hero-desktop.svg") no-repeat;
     background-size: 100%;
     background-color: hsla(171, 93%, 89%, 0.575)
@@ -103,9 +97,11 @@ nav button {
     margin-bottom: -30px
 }
 .sc-text {
-    padding: 80px
+    padding: 80px;
 }
-
+.sc-text p {
+    color: grey;
+}
 .sc-img-grow {
     width: 100%;
     justify-self: center;
@@ -142,12 +138,11 @@ nav button {
     box-shadow: 2px 2px 9px 2px rgba(0, 0, 0, 0.205);
     border: white;
     border-radius: 10px;
-    padding: 5%;
-    /* grid-template-columns: 1fr; */
+    padding: 30px 150px;
     text-align: center;
     font-size: 20px;
     background: white;
-    /* margin-top:-140px; */
+    margin-top:-140px;
     justify-self: center;
     grid-area: banner;
 }
@@ -155,7 +150,7 @@ nav button {
 .banner button {
     background: hsl(322, 100%, 66%);
     box-shadow: 2px 2px 9px 2px rgba(0, 0, 0, 0.205);
-    padding: 25px 90px;
+    padding: 20px 90px;
     border-radius: 50px;
     border: none;
     font-weight: 700;
@@ -164,8 +159,8 @@ nav button {
 }
 footer {
     grid-area: footer;
-    /* background: hsl(192, 100%, 9%); */
-    /* margin-top:20%; */
+    background: hsl(192, 100%, 9%);
+    margin-top: 160px;
 }
 .footer-content{
     color:white;
@@ -176,8 +171,7 @@ footer {
     background: hsl(192, 100%, 9%);
   }
   .footer-logo{
-        
-    width:200px;
+    width:250px;
     height:50px;
     background:url("images/logo.1.svg") no-repeat;
     background-size:100%;
@@ -191,9 +185,57 @@ footer {
   .contact-details .inline{
     display:flex;
     width:100%;
+    align-items: baseline
+  }
+  i {
+    padding: 10px 30px
+  }
+  .link-a ,.link-b {
+    align-self: flex-start;
+    padding-top: 30px
+  }
+  .link-a a, .link-b a , .inline a{
+    color: white;
+    text-decoration: none;
+    list-style: none;
+    line-height: 50px;
+  }
+  .social-media {
+      align-self: flex-start;
+      padding-top: 50px
+  }
+  .social-media a {
+    color: white;
+    text-decoration: none;
+  }
+  .social-media i {
+    width:20px;
+    height:20px;
+    text-align: center;
     padding:10px;
+    border:1px solid white;
+    border-radius:50%;
+    font-size:20px;
     color:white;
-    
+  }
+  .copyrights {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      font-size: 10px;
+      color: white;
+      grid-template-areas: 
+      "by . cp";
+      place-items: center
+  }
+  .copyrights span {
+      grid-area: by;
+  }
+  .copyrights p {
+      grid-area: cp;
+  }
+  span a {
+      color: white;
+      text-decoration: underline;
   }
   @media screen and (max-width:414px) {
     .grid-parent {
