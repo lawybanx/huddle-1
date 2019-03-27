@@ -3,7 +3,6 @@ body {
     font-size: 18px;
     font-family: 'Open Sans', sans-serif;
     color: hsl(192, 100%, 9%);
-    font-weight: 400;
     box-sizing: border-box;
 }
 p {
@@ -36,7 +35,6 @@ nav {
     justify-content: space-between;
     align-items: center;
     margin: 0px 100px;
-    /* width: fit-content */
 }
 nav img {
     width: 70%
@@ -45,10 +43,10 @@ nav button {
     color: hsl(192, 100%, 9%);
     background: white;
     box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.205);
-    padding: 15px 50px;
+    padding: 10px 50px;
     border-radius: 50px;
     border: none;
-    font-weight: 700
+    font-weight: 500
 }
 .quote {
     grid-area: quote;
@@ -57,11 +55,12 @@ nav button {
 }
 .quote button{
     background: hsl(322, 100%, 66%);
-    padding: 18px 70px;
+    padding: 10px 70px;
     border-radius: 50px;
     border: none;
-    font-weight: 700;
-    color: white
+    font-weight: 500;
+    color: white;
+    box-shadow: 1px 1px 5px 1px rgba(156, 227, 255, 0.884);
 }
 .mockup {
     grid-area: mockup;
@@ -76,11 +75,9 @@ nav button {
     grid-template-rows: repeat(3, 1fr);
     padding:30px;
     place-content: center;
-    /* margin-top: 90px; */
     grid-gap: 50px
 }
 .content {
-    /* margin:70px 80px 0px 80px; */
     width:80%;
     box-shadow: 2px 2px 9px 2px rgba(0, 0, 0, 0.205);
     border: white;
@@ -105,25 +102,22 @@ nav button {
 .sc-img-grow {
     width: 100%;
     justify-self: center;
-    background: url("./images/illustration-grow-together.svg");
+    background: url("./images/illustration-grow-together.svg") no-repeat;
     background-size:contain;
-    background-repeat:no-repeat;
 }
 
 .sc-img-flow {
     width: 100%;
     justify-self: center;
-    background: url("./images/illustration-flowing-conversation.svg");
+    background: url("./images/illustration-flowing-conversation.svg") no-repeat;
     background-size:contain;
-    background-repeat:no-repeat;
 }
 
 .sc-img-users {
     width: 100%;
     justify-self: center;
-    background: url("./images/illustration-your-users.svg");
+    background: url("./images/illustration-your-users.svg") no-repeat;
     background-size:contain;
-    background-repeat:no-repeat;
 }
 
 .footer-grid {
@@ -135,25 +129,25 @@ nav button {
     "footer";
 }
 .banner {
-    box-shadow: 2px 2px 9px 2px rgba(0, 0, 0, 0.205);
+    grid-area: banner;
+    box-shadow: 1px 4px 9px 4px rgba(0, 0, 0, 0.205);
     border: white;
     border-radius: 10px;
-    padding: 30px 150px;
+    padding: 20px 150px;
     text-align: center;
     font-size: 20px;
     background: white;
-    margin-top:-140px;
+    margin-top:-90px;
     justify-self: center;
-    grid-area: banner;
 }
 
 .banner button {
     background: hsl(322, 100%, 66%);
-    box-shadow: 2px 2px 9px 2px rgba(0, 0, 0, 0.205);
-    padding: 20px 90px;
+    box-shadow: 2px 2px 9px 2px rgb(187, 250, 255);
+    padding: 10px 90px;
     border-radius: 50px;
     border: none;
-    font-weight: 700;
+    font-weight: 500;
     color: rgb(241, 241, 241);
     font-size: 18px
 }
@@ -167,20 +161,17 @@ footer {
     display: flex;
     padding:50px;
     justify-content: space-between;
-    grid-area: footer;
     background: hsl(192, 100%, 9%);
   }
   .footer-logo{
     width:250px;
     height:50px;
     background:url("images/logo.1.svg") no-repeat;
-    background-size:100%;
   }
   .contact-details{
     width:30%;
     display:flex;
     flex-direction:column;
-    
   }
   .contact-details .inline{
     display:flex;
@@ -201,8 +192,8 @@ footer {
     line-height: 50px;
   }
   .social-media {
-      align-self: flex-start;
-      padding-top: 50px
+    align-self: flex-start;
+    padding-top: 50px
   }
   .social-media a {
     color: white;
@@ -219,45 +210,42 @@ footer {
     color:white;
   }
   .copyrights {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      font-size: 10px;
-      color: white;
-      grid-template-areas: 
-      "by . cp";
-      place-items: center
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 10px;
+    color: white;
+    grid-template-areas: 
+    "by . cp";
+    place-items: center;
+    place-content: center;
   }
   .copyrights span {
-      grid-area: by;
+    grid-area: by;
   }
   .copyrights p {
-      grid-area: cp;
+    grid-area: cp;
   }
   span a {
-      color: white;
-      text-decoration: underline;
+    color: white;
+    text-decoration: underline;
   }
   @media screen and (max-width:414px) {
     .grid-parent {
-    grid-template-columns: 1fr;
-    grid-template-rows: 100px 1fr 300px;
-    grid-template-areas: 
-    "nav"
-    "quote"
-    "mockup";
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 1fr 300px;
+        grid-template-areas: 
+        "nav"
+        "quote"
+        "mockup";
     }
     nav {
-        margin: 0 5px;
-        /* width: 90% */
+        margin: 0 15px;
     }
     nav img {
-        width: 130px
+        width: 100px
     }
     nav button {
         width:90px;
-        height:25px;
-        font-size:13px;
-        font-weight:bold;
         padding: 5px;
     }
     .quote {
@@ -265,35 +253,21 @@ footer {
         text-align: center;
     }
     .mockup {
-        background-size: 100%;
         justify-self: center
     }
-    .quote button {
-        padding: 12px 50px
-    }
     .main-content {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 1fr);
-        grid-gap: 10px;
-        place-content: center;
-    }
-    .content {
-        width: 100%;
+        grid-gap: 25px;
     }
     .gap {
-        margin-bottom: 0px
+        margin-bottom: 0;
     }
     .main-section {
-        display: grid;
-        grid-template-rows: 1fr 1fr;
         grid-template-columns: auto;
         grid-template-areas: 
         "sc-img"
         "sc-text";
         padding: 15px;
         width: 100%;
-        /* align-items: center */
     }
     .sc-text {
         grid-area: sc-text;
@@ -304,5 +278,50 @@ footer {
         grid-area: sc-img;
         background-size:contain;
         height: 250px;      
+    }
+    .footer-grid {
+        padding: 0 20px;
+        justify-content: center
+    }
+    .banner {
+        padding: 10px;
+        font-size: 14px;
+        width: 80%;
+        text-align: center;
+    }
+    .banner button {
+        padding: 5px 15px;
+    }
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        padding: 90px 0;
+    }
+    .footer-logo {
+        background-size: 200px
+    }
+    .contact-details {
+        width: 90%;
+        margin-bottom: 70px;
+    }
+    i {
+        padding: 10px;
+    }
+    .link-a ul, .link-b ul {
+        padding: 10px;
+        margin-top: -70px;
+    }
+    .social-media {
+        margin: auto;
+    }
+    .social-media a {
+        padding: 0 5px;
+    }
+    .copyrights {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        "cp"
+        "by";
     }
 }
